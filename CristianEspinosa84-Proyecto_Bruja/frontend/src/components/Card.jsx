@@ -1,0 +1,65 @@
+import React from "react";
+
+function Card({
+  card,
+  onCardClick,
+  onLikeClick,
+  onDeleteClick,
+  currentUserId,
+}) {
+  // const isOwn = card.owner._id === currentUserId;
+  // const isLiked = card.likes.includes(currentUserId);
+
+  // owner puede venir como objeto {_id} o como string
+  const ownerId = card?.owner?._id ?? card?.owner;
+  const isOwn = ownerId === currentUserId;
+
+  // likes puede venir como array de strings o de objetos {_id}
+  const likeIds = Array.isArray(card.likes)
+    ? card.likes.map((l) => l?._id ?? l)
+    : [];
+  const isLiked = likeIds.includes(currentUserId);
+
+  console.log("Card ID:", card._id);
+  console.log("Likes:", card.likes);
+  console.log("currentUserId:", currentUserId);
+  console.log("isLiked:", isLiked);
+
+  function handleLike() {
+    onLikeClick(card);
+  }
+
+  function handleDelete() {
+    onDeleteClick(card);
+  }
+
+  function handleClick() {
+    onCardClick(card);
+  }
+
+  return (
+    <div className="element">
+      {isOwn && (
+        <button className="element__trash" onClick={handleDelete}></button>
+      )}
+      <img
+        className="element__image"
+        src={card.link}
+        alt={card.name}
+        onClick={handleClick}
+      />
+      <div className="element__info">
+        <h2 className="element__title">{card.name}</h2>
+        <div className="element__like-container">
+          <button
+            className={`element__like ${isLiked ? "element__like-black" : ""}`}
+            onClick={handleLike}
+          ></button>
+          <span className="element__like-counter">{card.likes.length}</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Card;

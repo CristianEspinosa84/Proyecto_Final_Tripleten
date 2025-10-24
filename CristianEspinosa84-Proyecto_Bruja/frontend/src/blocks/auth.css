@@ -1,0 +1,167 @@
+.auth__title {
+  display: flex;
+  justify-content: center;
+  color: black;
+  padding-top: 180px;
+  font-weight: 900;
+  font-size: 24px;
+}
+.auth__form {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.auth__form {
+  display: flex;
+  flex-direction: column; /* uno debajo del otro */
+  gap: 20px; /* espacio entre inputs y botón */
+  width: 100%;
+  max-width: 400px; /* o lo que se ajuste al diseño */
+  margin: 0 auto; /* centrar en pantalla */
+}
+
+.auth__input {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #fff; /* como en tu imagen */
+  background-color: transparent;
+  color: #000;
+  outline: none;
+}
+
+.auth__input::placeholder {
+  color: #000;
+}
+
+.auth__button {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 165px;
+}
+
+.auth__button:hover {
+  background-color: #ddd;
+}
+
+.auth__register-text {
+  color: #000;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 65px;
+}
+
+.auth__register-text a {
+  color: black;
+  text-decoration: none;
+}
+
+.header__auth-email {
+  color: #000;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.header__auth-logout {
+  border: none;
+  background: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.header__auth-title {
+  line-height: 1;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.header__auth-logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* width: 880px; */
+  /* border-bottom: 0.5px solid #fff; */
+  /* padding: 0 0 30px; */
+}
+
+.header__auth-left {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.service__title {
+  line-height: 1;
+}
+
+.navbtn {
+  padding: 8px 20px;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  background: #e0d6cf;
+  color: #333;
+  transition: all 0.2s ease;
+}
+.navbtn:hover {
+  background: #a67c5b;
+  color: white;
+}
+.navbtn:active {
+  transform: translateY(0);
+}
+
+/* Activo (ruta actual) */
+.navbtn--active {
+  background: #a67c5b;
+  color: #fff;
+}
+
+/* Variantes opcionales */
+.navbtn--accent {
+  background: #ff7f50; /* CTA fuerte */
+  color: white;
+}
+.navbtn--outline {
+  background: #e0d6cf;
+  border: none;
+  border-radius: 9999px;
+  color: #333;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 8px 20px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.navbtn--outline:hover {
+  background: #a67c5b;
+  color: #fff;
+}
+
+.navbtn--accent:hover {
+  background: #e96d3f;
+}
+
+/* Email compacto para que no se “coma” el layout */
+.header__auth-email {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin: 0 4px 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px; /* ajusta si necesitas */
+}

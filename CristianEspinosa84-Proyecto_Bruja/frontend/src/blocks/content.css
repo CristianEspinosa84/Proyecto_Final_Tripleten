@@ -1,0 +1,7 @@
+.content {
+  background-image: url("../Images/KarinaLogo4.svg");
+  background-repeat: no-repeat;
+  background-position: center 250px; /* baja un poco bajo el header */
+  background-size: clamp(520px, 60vmin, 900px); /* escala fluida y contenida */
+  background-attachment: fixed; /* se mueve con el scroll */
+}

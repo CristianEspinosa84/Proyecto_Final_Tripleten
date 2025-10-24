@@ -1,0 +1,27 @@
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+/* Configuración base */
+.page {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-family: "cinzel", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  background-color: #d1c0b0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 1079px) {
+  .page {
+    display: flex;
+  }
+}

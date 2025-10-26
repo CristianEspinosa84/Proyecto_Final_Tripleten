@@ -4,7 +4,7 @@ const validator = require("validator"); // Librería para validar URLs
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    default: "Nombre usario",
+    default: "Nombre usuario",
     minlength: [2, "El nombre debe tener al menos 2 caracteres"],
     maxlength: [30, "El nombre no puede tener más de 30 caracteres"],
   },

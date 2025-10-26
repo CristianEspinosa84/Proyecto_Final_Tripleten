@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://api.ericespinosa17.chickenkiller.com";
 
 function handleResponse(res) {
   return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
